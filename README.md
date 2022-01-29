@@ -7,27 +7,37 @@ desktop and execute commands when the event happens.
 
 # Installation 
 
-
 ## Dependencies
 
-- awk
+Install the dependencies:
 
-### wayland
+### Wayland
 
-- grim 
-- slurp
-
-On debian based operating system, install with:
+On debian based operating systems, install with:
     
     sudo apt install slurp grim awk
 
-### x11
-
-- `import`
-- `slop`
+### X11
 
 On debian based operating system, install with:
     
     sudo apt install imagemagick slop awk
 
-## script
+## Install script
+
+    curl -LO https://raw.githubusercontent.com/revelaction/pixelchanged/master/pixelchanged.sh 
+    # make executable
+    chmod +x pixelchanged.sh
+    # copy scrypt to your path
+    cp pixelchanged.sh ~/bin
+
+# Examples
+
+## Desktop notification
+
+## Play sound
+
+# Customize
+
+
+
