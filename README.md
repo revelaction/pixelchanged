@@ -48,5 +48,24 @@ On debian based operating system, install with:
 
 # Customize
 
+Modify the script to run arbitrary commands by first creating a bash function
+
+    my_commands()
+    {
+        # my commands
+    }
+
+Add the function call to the change_handler function
+
+    change_handler()
+    {
+        # put your commands function here 
+        my_commands
+
+        # notify_desktop
+        # play_sound
+    }
+
+
 
 
