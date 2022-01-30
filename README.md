@@ -29,9 +29,9 @@ On debian based operating system, install with:
 ## Install script
 
     curl -LO https://raw.githubusercontent.com/revelaction/pixelchanged/master/pixelchanged.sh 
-    # make executable
+    # make it executable
     chmod +x pixelchanged.sh
-    # copy scrypt to your path
+    # copy it to your path
     cp pixelchanged.sh ~/bin
 
 # Usage
