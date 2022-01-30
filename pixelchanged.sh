@@ -60,6 +60,7 @@ take_screenshot()
     import -window root -crop $G ${TEMP_SCREENSHOT}
 }
 
+# select a region of the screen for monitoring changes
 select_pixel_area()
 {
     # wayland
@@ -86,7 +87,7 @@ notify_desktop()
     notify-send --urgency=low -t 3000 "pixelchanged" "The was a pixel change!"
 }
 
-run_event_handler()
+change_handler()
 {
     # put commands here that are executed when a change in the pixel happens
     notify_desktop
@@ -97,8 +98,12 @@ readonly desktop_type=$(determine_desktop_type)
 
 check_commands
 
-#select_pixel_area
+
+echo "Please select a region of the screen"
 readonly pixel_area=$(select_pixel_area)
+echo "Selected region: ${pixel_area}. Desktop type: ${desktop_type}"
+echo
+echo "📡 Starting monitoring for changes of the selected region each ${period_sleep} seconds."
 
 while :
 do
@@ -113,7 +118,7 @@ do
 
     # pixel changes
     if [ "$h" != "$last_hash" ]; then
-        run_event_handler
+        change_handler
     fi
 
     last_hash="$h"

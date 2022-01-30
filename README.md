@@ -1,7 +1,7 @@
 # pixelchanged
 
-`pixelchanged` is a simple `bash` script to detect changes in a region of the
-desktop and execute commands when the event happens.
+`pixelchanged` is a simple `bash` script to detect changes in a region of your
+screen and execute commands when the change happens.
 
 `pixelchanged` works in linux (wayland and x11).
 
@@ -30,6 +30,15 @@ On debian based operating system, install with:
     chmod +x pixelchanged.sh
     # copy scrypt to your path
     cp pixelchanged.sh ~/bin
+
+# Usage
+
+    ⤷ ./pixelchanged.sh
+    Please select a region of the screen
+    Selected region: 100x101+2346+397. Desktop type: x11
+
+    📡 Starting monitoring for changes of the selected region each 10 seconds.
+
 
 # Examples
 
