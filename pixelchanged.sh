@@ -5,7 +5,7 @@ set -o pipefail
 readonly TEMP_SCREENSHOT=/tmp/pixelchanged.png
 readonly TEMP_SCREENSHOT_LAST=/tmp/pixelchanged_last.png
 # period for checking changes in seconds.
-readonly period_sleep=10
+readonly period_sleep=5
 
 last_hash=""
 
@@ -78,7 +78,7 @@ select_pixel_area()
 play_sound()
 {
     check_command "cvlc"
-    cvlc --play-and-exit ./Whistling.mp3
+    cvlc --play-and-exit ~/src/caas/music/Whistling.mp3
 }
 
 # example function to desktop notification
@@ -89,9 +89,10 @@ notify_desktop()
 
 change_handler()
 {
+    echo "Playing sound"
     # put commands here that are executed when a change in the pixel happens
-    notify_desktop
-    # play_sound
+    #notify_desktop
+    play_sound
 }
 
 readonly desktop_type=$(determine_desktop_type)
