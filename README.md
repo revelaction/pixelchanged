@@ -33,7 +33,7 @@ On debian based operating system, install with:
 
 # Usage
 
-    ⤷ ./pixelchanged.sh
+    ⤷ pixelchanged.sh
     Please select a region of the screen
     Selected region: 100x101+2346+397. Desktop type: x11
 
@@ -44,7 +44,36 @@ On debian based operating system, install with:
 
 ## Desktop notification
 
+Per default, the script creates a desktop notification when there is a change
+in the selected region.
+
+    change_handler()
+    {
+        # put commands here that are executed when a change in the pixel happens
+        notify_desktop
+        # play_sound
+    }
+
+
 ## Play sound
+
+To play a sound when the selected region changes just substitute the path to a
+music file in the `play_sound` function. 
+
+    play_sound()
+    {
+        check_command "cvlc"
+        cvlc --play-and-exit <your-path-to-a-sound-file>.opus
+    }
+
+and uncomment the call to the function in `change_handler`
+
+    change_handler()
+    {
+        # put commands here that are executed when a change in the pixel happens
+        # notify_desktop
+        play_sound
+    }
 
 # Customize
 
