@@ -44,7 +44,7 @@ On debian based operating system, install with:
 
 ## Desktop notification
 
-Per default, the script creates a desktop notification when there is a change
+Per default, the script creates a desktop notification when it detects a change
 in the selected region.
 
     change_handler()
@@ -53,7 +53,6 @@ in the selected region.
         notify_desktop
         # play_sound
     }
-
 
 ## Play sound
 
@@ -77,14 +76,14 @@ and uncomment the call to the function in `change_handler`
 
 # Customize
 
-Modify the script to run arbitrary commands by first creating a bash function
+Modify the script to run arbitrary commands by first creating a bash function:
 
     my_commands()
     {
         # my commands
     }
 
-Add the function call to the change_handler function
+Add the function call to the `change_handler` function
 
     change_handler()
     {
