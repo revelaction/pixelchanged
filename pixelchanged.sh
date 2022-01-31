@@ -78,7 +78,7 @@ select_pixel_area()
 play_sound()
 {
     check_command "cvlc"
-    cvlc --play-and-exit ~/src/caas/music/Whistling.mp3
+    cvlc --play-and-exit ./Whistling.mp3
 }
 
 # example function to desktop notification
