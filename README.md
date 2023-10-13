@@ -1,8 +1,7 @@
-# pixelchanged
+<p align="center"><img alt="pixelchanged" src="logo.png"/></p>
 
 `pixelchanged` is a simple `bash` script to detect changes in a region of your
 screen and execute commands when the change happens.
-
 
 https://user-images.githubusercontent.com/96388231/151698551-528610c2-0886-47db-8052-15f520708774.mp4
 
