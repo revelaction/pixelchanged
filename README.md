@@ -80,33 +80,35 @@ play_sound()
 
 and uncomment the call to the function in `change_handler`
 
-    change_handler()
-    {
-        # put commands here that are executed when a change in the pixel happens
-        # notify_desktop
-        play_sound
-    }
+```bash
+change_handler()
+{
+    # put commands here that are executed when a change in the pixel happens
+    # notify_desktop
+    play_sound
+}
+```
 
 # Customize
 
 Modify the script to run arbitrary commands by first creating a bash function:
 
-    my_commands()
-    {
-        # my commands
-    }
+```bash
+my_commands()
+{
+    # my commands
+}
+```
 
-Add the function call to the `change_handler` function
+Add the function call to the `change_handler` function:
 
-    change_handler()
-    {
-        # put your commands function here 
-        my_commands
+```bash
+change_handler()
+{
+    # put your commands function here 
+    my_commands
 
-        # notify_desktop
-        # play_sound
-    }
-
-
-
-
+    # notify_desktop
+    # play_sound
+}
+```
