@@ -1,5 +1,7 @@
 <p align="center"><img alt="pixelchanged" src="logo.png"/></p>
 
+[![GitHub Release](https://img.shields.io/github/v/release/revelaction/pixelchanged?style=flat)]()
+ 
 `pixelchanged` is a simple `bash` script to detect changes in a region of your
 screen and execute commands when the change happens.
 
